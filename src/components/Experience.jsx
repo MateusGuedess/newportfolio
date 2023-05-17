@@ -44,6 +44,7 @@ export const Experience = () => {
   }, [curve])
 
   const cameraGroup = useRef()
+  const airplane = useRef()
 
   const scroll = useScroll()
 
@@ -54,9 +55,35 @@ export const Experience = () => {
     )
 
     const curPoint = linePoints[curPointIndex]
+    const pointAhead = linePoints[Math.min(curPointIndex + 1, linePoints.length - 1)]
+
+    const xDisplacement = (pointAhead.x - curPoint.x) * 80
+
+    const angleRotation = (xDisplacement < 0 ? 1: -1) * Math.min(Math.abs(xDisplacement), Math.PI / 3)
+
+    const targetAirplaneQuaternion = new THREE.Quaternion().setFromEuler(
+      new THREE.Euler(
+        airplane.current.rotation.x,
+        airplane.current.rotation.y,
+        angleRotation
+      )
+    )
+
+    const targetCameraQuaternion = new THREE.Quaternion().setFromEuler(
+      new THREE.Euler(
+        cameraGroup.current.rotation.x,
+        angleRotation,
+        cameraGroup.current.rotation.z
+      )
+    )
+
+    airplane.current.quaternion.slerp(targetAirplaneQuaternion, delta * 2)
+    cameraGroup.current.quaternion.slerp(targetCameraQuaternion, delta * 2)
 
     cameraGroup.current.position.lerp(curPoint, delta * 24)
   })
+
+
 
   return (
     <>
@@ -67,9 +94,11 @@ export const Experience = () => {
         fov={30}
         makeDefault
       />
+      <group ref={airplane}>
         <Float floatIntensity={2} speed={2}>
           <AirPlane rotation-y={Math.PI / 2} scale={[0.2, 0.2, 0.2]} position-y={0.1} />
         </Float>
+      </group>
       </group>
 
     <group
