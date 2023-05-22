@@ -266,7 +266,7 @@ export const Experience = () => {
   const lastScroll = useRef(0)
 
 
-  const { play } = usePlay()
+  const { play, setHasScroll } = usePlay()
 
   useFrame((_state, delta) => {
 
