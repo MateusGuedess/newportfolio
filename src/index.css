@@ -71,6 +71,12 @@ body {
   transition: all 2s ease-in-out;
 }
 
+.intro--disappear .logo {
+  top: 42px;
+  transform: scale(0.25);
+  transform-origin: center top;
+}
+
 .spinner {
   position: absolute;
   right: 0px;
@@ -80,6 +86,11 @@ body {
   animation: fadeIn 2.4s ease-in-out 1.2s forwards;
   opacity: 0;
 
+}
+
+.intro--disappear .spinner {
+  opacity: 1;
+  animation: fadeOut 1s ease-in-out forwards;
 }
 
 .spinner__image {
@@ -131,6 +142,10 @@ body {
   transition: 0.42s ease-in-out;
   z-index: -1;
   transform: translateX(-50%) translateY(50%);
+}
+
+.intro--disappear .explore {
+  animation: fadeOut 1s ease-in-out forwards;
 }
 
 
