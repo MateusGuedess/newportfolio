@@ -11,7 +11,7 @@ body {
 
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 2px;
 }
 
 /* TRACK */
@@ -32,6 +32,10 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+.overlay--disable {
+  pointer-events: none;
 }
 
 .loader {
