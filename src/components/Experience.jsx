@@ -8,6 +8,8 @@ import { useFrame } from "@react-three/fiber";
 import { Group, Vector3, Euler } from "three";
 import TextSection from "./TextSection";
 import { gsap } from "gsap";
+import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
+
 
 
 const LINE_NB_POINTS = 1000
@@ -28,10 +30,11 @@ export const Experience = () => {
     new THREE.Vector3(0, 0, -5 * CURVE_DISTANCE),
     new THREE.Vector3(0, 0, -6 * CURVE_DISTANCE),
     new THREE.Vector3(0, 0, -7 * CURVE_DISTANCE),
-    new THREE.Vector3(0, 0, -8 * CURVE_DISTANCE),
-    new THREE.Vector3(0, 0, -9 * CURVE_DISTANCE),
-    new THREE.Vector3(0, 0, -10 * CURVE_DISTANCE)
   ], [])
+
+  const sceneOpacity = useRef(0);
+  const lineMaterialRef = useRef();
+
 
   const curve = useMemo(() => {
 
@@ -262,6 +265,9 @@ export const Experience = () => {
   const lastScroll = useRef(0)
 
   useFrame((_state, delta) => {
+
+    lineMaterialRef.current.opacity = sceneOpacity.current;
+
     // console.log(textSections[0].position.distanceTo(cameraGroup.current.position))
     const scrollOffset = Math.max(0, scroll.offset);
 
@@ -440,13 +446,13 @@ export const Experience = () => {
                 }
               ]}
             />
-            <meshStandardMaterial color={"white"} opacity={1} transparent envMapIntensity={2}/>
+            <meshStandardMaterial onBeforeCompile={fadeOnBeforeCompile} color={"white"} ref={lineMaterialRef} transparent envMapIntensity={2}/>
             
           </mesh>
       </group>
 
       {clouds?.map((cloud, index) => 
-        <Cloud {...cloud} key={index} />
+        <Cloud sceneOpacity={sceneOpacity} {...cloud} key={index} />
       )}
 
     </>
