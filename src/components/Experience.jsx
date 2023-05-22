@@ -2,13 +2,14 @@ import { Float, OrbitControls, Line, PerspectiveCamera, useScroll, Text } from "
 import Background from "./Background";
 import {AirPlane} from "./AirPlane"
 import { Cloud } from "./Cloud";
-import { useLayoutEffect, useMemo, useRef } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import * as THREE from "three"
 import { useFrame } from "@react-three/fiber";
 import { Group, Vector3, Euler } from "three";
 import TextSection from "./TextSection";
 import { gsap } from "gsap";
 import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
+import { usePlay } from "../contexts/Play";
 
 
 
@@ -264,10 +265,22 @@ export const Experience = () => {
   const scroll = useScroll()
   const lastScroll = useRef(0)
 
+
+  const { play } = usePlay()
+
   useFrame((_state, delta) => {
 
     lineMaterialRef.current.opacity = sceneOpacity.current;
 
+
+    if(play && sceneOpacity.current < 1) {
+      sceneOpacity.current = THREE.MathUtils.lerp(
+        sceneOpacity.current,
+        1,
+        delta * 0.1
+      )
+    }
+    
     // console.log(textSections[0].position.distanceTo(cameraGroup.current.position))
     const scrollOffset = Math.max(0, scroll.offset);
 
@@ -385,6 +398,8 @@ export const Experience = () => {
     colorB: "#abaadd"
   })
 
+  const planeInTl = useRef();
+
   useLayoutEffect(() => {
     tl.current = gsap.timeline()
 
@@ -406,8 +421,20 @@ export const Experience = () => {
 
      tl.current.pause()
 
-  })
+     planeInTl.current = gsap.timeline();
+    planeInTl.current.pause();
+    planeInTl.current.from(airplane.current.position, {
+      duration: 3,
+      z: 5,
+      y: -2,
+    });
+  }, [])
 
+  useEffect(() => {
+    if (play) {
+      planeInTl.current.play();
+    }
+  }, [play]);
 
 
   return (

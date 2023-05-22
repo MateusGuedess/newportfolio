@@ -22,4 +22,4 @@ export function Cloud({sceneOpacity, ...props}) {
   )
 }
 
-useGLTF.preload('/models/cloud/model.glb')
+useGLTF.preload('/models/cloud/model.gltf')
