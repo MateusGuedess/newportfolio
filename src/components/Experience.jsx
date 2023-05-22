@@ -270,6 +270,10 @@ export const Experience = () => {
 
   useFrame((_state, delta) => {
 
+    if(lastScroll.current <= 0 && scroll.offset > 0) {
+      setHasScroll(true)
+    }
+
     lineMaterialRef.current.opacity = sceneOpacity.current;
 
 
@@ -437,7 +441,7 @@ export const Experience = () => {
   }, [play]);
 
 
-  return (
+  return useMemo(() => (
     <>
       <directionalLight position={[0, 3, 1]} intensity={0.1} />
       {/* <OrbitControls  /> */}
@@ -483,5 +487,5 @@ export const Experience = () => {
       )}
 
     </>
-  );
+  ), [])
 };
