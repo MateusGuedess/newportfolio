@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Html } from "@react-three/drei";
+import { Text } from "@react-three/drei";
 import { fadeOnBeforeCompileFlat } from '../utils/fadeMaterial';
 
 

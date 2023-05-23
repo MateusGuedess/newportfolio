@@ -6,10 +6,11 @@ export const PlayProvider = ({ children }) => {
     const [play, setPlay] = useState(false)
     const [hasScroll, setHasScroll] = useState(false)
     const [end, setEnd] = useState(false)
+    const [scrollMoment, setScrollMoment] = useState(0)
 
     return (
         <Context.Provider
-            value={{play, setPlay, hasScroll, setHasScroll, end, setEnd}}
+            value={{play, setPlay, hasScroll, setHasScroll, end, setEnd, scrollMoment, setScrollMoment}}
         >
             {children}
         </Context.Provider>

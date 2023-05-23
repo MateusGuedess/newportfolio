@@ -4,6 +4,7 @@ import { ScrollControls } from "@react-three/drei";
 import { EffectComposer, Noise } from "@react-three/postprocessing";
 import Overlay from "./components/Overlay"
 import { usePlay } from "./contexts/Play";
+import Me from "./components/Me";
 
 function App() {
   const { play, end } = usePlay()
@@ -31,6 +32,7 @@ function App() {
         </EffectComposer>
       </Canvas>
       <Overlay />
+      <Me />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { Float, OrbitControls, Line, PerspectiveCamera, useScroll, Text } from "@react-three/drei";
+import { Float, OrbitControls,  PerspectiveCamera, useScroll } from "@react-three/drei";
 import Background from "./Background";
 import {AirPlane} from "./AirPlane"
 import { Cloud } from "./Cloud";
@@ -21,7 +21,6 @@ const AIRPLANE_MAX_ANGLE = 35;
 const FRICTION_DISTANCE = 42;
 
 export const Experience = () => {
-
   const curvePoints = useMemo(() => [
     new THREE.Vector3(0, 0, 0),
     new THREE.Vector3(0, 0, -CURVE_DISTANCE),
@@ -258,10 +257,12 @@ export const Experience = () => {
   const lastScroll = useRef(0)
 
 
-  const { play, setHasScroll, end, setEnd } = usePlay()
+
+
+  const { play, setHasScroll, end, setEnd, setScrollMoment } = usePlay()
 
   useFrame((_state, delta) => {
-
+    setScrollMoment(scroll.offset)
     if(window.innerWidth > window.innerHeight) {
       //LANDSCAPE
       camera.current.fov = 30
@@ -300,7 +301,6 @@ export const Experience = () => {
       return 
     }
 
-    // console.log(textSections[0].position.distanceTo(cameraGroup.current.position))
     const scrollOffset = Math.max(0, scroll.offset);
 
 
@@ -413,6 +413,7 @@ export const Experience = () => {
         setEnd(true)
         planeOutTl.current.play()
       }
+
   })
 
 
@@ -425,8 +426,10 @@ export const Experience = () => {
   const planeInTl = useRef();
   const planeOutTl = useRef();
 
+
   useLayoutEffect(() => {
     tl.current = gsap.timeline()
+
 
     tl.current.to(backgroundColors.current, {
       duration: 1,
@@ -480,7 +483,12 @@ export const Experience = () => {
       duration: 1,
       z: -1000,
     })
+
+     
+
   }, [])
+
+ 
 
   useEffect(() => {
     if (play) {
@@ -510,6 +518,7 @@ export const Experience = () => {
 
       {/* TEXT */}
       {textSections?.map((textSection, index) => <TextSection {...textSection} key={index}/>)}
+
 
       <group
         position-y={-2}

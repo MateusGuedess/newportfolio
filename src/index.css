@@ -193,6 +193,10 @@ body {
   color: white;
 }
 
+.show {
+  animation: fadeIn 2.4s ease-in-out 1.2s forwards;
+  opacity: 0;
+}
 
 @media screen and (max-width: 768px) {
   .logo {
