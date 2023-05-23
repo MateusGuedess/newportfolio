@@ -18,7 +18,7 @@ function TextSection({title, subtitle, ...props}) {
                     comp
                 >
                     {title}
-                    <mesh onBeforeCompile={fadeOnBeforeCompileFlat} color={"white"} />
+                    <meshStandardMaterial onBeforeCompile={fadeOnBeforeCompileFlat} color={"white"} />
                 </Text>
             )}
             <Text
@@ -30,7 +30,7 @@ function TextSection({title, subtitle, ...props}) {
                 font={"./fonts/Inter-Regular.ttf"}
             >
                 {subtitle}
-                <mesh onBeforeCompile={fadeOnBeforeCompileFlat} color={"white"} />
+                <meshStandardMaterial onBeforeCompile={fadeOnBeforeCompileFlat} color={"white"} />
 
             </Text>
       </group>

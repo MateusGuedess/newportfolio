@@ -4,7 +4,7 @@ import { usePlay } from '../contexts/Play'
 
 function Overlay() {
     const {progress} = useProgress()
-    const {play, setPlay, hasScroll} = usePlay()
+    const {play, setPlay, hasScroll, end} = usePlay()
 
   return (
     <div className={`overlay  ${play ? "overlay--disable" : ""} ${hasScroll ? "overlay--scrolled" : ""}`}>
@@ -21,6 +21,11 @@ function Overlay() {
                 </button>
             </div>
         )}
+        <div className={`outro ${end ? "outro--appear" : ""}`}>
+            <p className="outro__text">
+                Wish you had a great flight with us...
+            </p>
+        </div>
     </div>
   )
 }

@@ -5,9 +5,11 @@ const Context = createContext()
 export const PlayProvider = ({ children }) => {
     const [play, setPlay] = useState(false)
     const [hasScroll, setHasScroll] = useState(false)
+    const [end, setEnd] = useState(false)
+
     return (
         <Context.Provider
-            value={{play, setPlay, hasScroll, setHasScroll}}
+            value={{play, setPlay, hasScroll, setHasScroll, end, setEnd}}
         >
             {children}
         </Context.Provider>

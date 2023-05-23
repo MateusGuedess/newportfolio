@@ -170,6 +170,51 @@ body {
   animation: fadeOut 1s ease-in-out forwards;
 }
 
+.outro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+}
+
+.outro--appear {
+  opacity: 1;
+}
+
+.outro__text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 3rem;
+    letter-spacing: 0.25;
+  }
+
+  .intro--disappear .logo {
+    top: 24px;
+    transform: scale(0.5);
+    transform-origin: center top;
+  }
+
+  .spinner__image {
+    width: 82px;
+    height: 82px;
+  }
+
+  .outro__text {
+    font-size: 1rem;
+  }
+}
 
 
 /* ANIMATIONS */
