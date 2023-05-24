@@ -11,7 +11,7 @@ function Me() {
       {scrollMoment >= 0.1 && scrollMoment <= 0.16 && <motion.div  
       className="about-me"
       initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: scrollMoment * 8, opacity: 1 }}
+      animate={{ scale: 1, opacity: 1 }}
       exit={{ opacity: 0, scale: 1 }}
       
       transition={{
