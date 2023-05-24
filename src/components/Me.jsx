@@ -1,14 +1,14 @@
 import React from 'react'
 import { usePlay } from '../contexts/Play'
 import { motion, AnimatePresence } from "framer-motion";
-
+import ProfilePhoto from "../assets/Profile.png"
 
 function Me() {
   const {scrollMoment} = usePlay()
 
   return (
     <AnimatePresence>
-      {scrollMoment > 0.11 && scrollMoment < 0.16 && <motion.div  
+      {scrollMoment >= 0.1 && scrollMoment <= 0.16 && <motion.div  
       className="about-me"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: scrollMoment * 8, opacity: 1 }}
@@ -21,7 +21,7 @@ function Me() {
         delay: 0.5,
         duration: 1000
       }}>
-        <img src="https://placehold.co/200x230" width="200"height="230"/>
+        <img src={ProfilePhoto} />
         <div  className="article">
           <h2>Mateus Guedes da Conceição</h2>
           Mussum Ipsum, cacilds vidis litro abertis. Mé faiz elementum girarzis, nisi eros vermeio.

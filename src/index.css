@@ -27,12 +27,13 @@
   top: 30px;
   left: -30px;
   border-radius: 10px;
+  width: 185px;
 }
 
 .about-me .article {
   padding: 20px;
   text-align: justify;
-  width: 50%;
+  width: 60%;
   font-size: 16px;
 }
 
@@ -236,7 +237,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.25;
   }
 
@@ -254,6 +255,41 @@ body {
   .outro__text {
     font-size: 1rem;
   }
+
+  .about-me {
+    position: absolute;
+    top: 25%;
+    left: calc(50% - 13vh);
+    border-radius: 10px;
+    max-width: 250px;
+    color: #444;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    min-width: 200px;
+    justify-content: space-between;
+  }
+  
+  .about-me img {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 190px;
+  }
+  
+  .about-me .article {
+    padding: 20px;
+     margin-top: 70%;
+    text-align: justify;
+    width: 83%;    
+    font-size: 13px;
+  }
+  
+  .about-me .article h2 {
+    font-size: 16px;
+  }
+  
 }
 
 
