@@ -4,8 +4,12 @@ import { Gradient, LayerMaterial } from 'lamina'
 import  * as THREE from "three"
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { usePlay } from '../contexts/Play'
+
 
 function Background({backgroundColors}) {
+
+  const {setColor} = usePlay()
 
   const start = 0.2
   const end = -0.5
@@ -29,6 +33,7 @@ function Background({backgroundColors}) {
     gradientEnvRef.current.colorB = new THREE.Color(
       backgroundColors.current.colorB
     )
+  
   })
 
   return (
