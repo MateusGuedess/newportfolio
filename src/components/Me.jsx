@@ -21,7 +21,6 @@ function Me() {
         delay: 0.5,
         duration: 1000
       }}>
-        {console.log(scrollMoment)}
         <img src="https://placehold.co/200x230" width="200"height="230"/>
         <div  className="article">
           <h2>Mateus Guedes da Conceição</h2>
