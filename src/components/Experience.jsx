@@ -50,7 +50,7 @@ export const Experience = () => {
         curvePoints[1].y,
         curvePoints[1].z
       ),
-      title:"Welcome to my FOLIO!"
+      title:""
     },
     {
       cameraRailDist: -1.5,
@@ -59,8 +59,7 @@ export const Experience = () => {
         curvePoints[2].y,
         curvePoints[2].z
       ),
-      title: "Mateus Guedes, 26",
-      subtitle: "a Brazilian FRONTEND"
+      title: "",
     }]
   },[])
 
@@ -259,10 +258,12 @@ export const Experience = () => {
 
 
 
-  const { play, setHasScroll, end, setEnd, setScrollMoment } = usePlay()
+  const { play, setHasScroll, end, setEnd, setScrollMoment, scrollMoment } = usePlay()
 
   useFrame((_state, delta) => {
-    setScrollMoment(scroll.offset)
+    if(scroll.offset != scrollMoment) {
+      setScrollMoment(scroll.offset)
+    }
     if(window.innerWidth > window.innerHeight) {
       //LANDSCAPE
       camera.current.fov = 30
@@ -517,7 +518,7 @@ export const Experience = () => {
       </group>
 
       {/* TEXT */}
-      {textSections?.map((textSection, index) => <TextSection {...textSection} key={index}/>)}
+      {/* {textSections?.map((textSection, index) => <TextSection {...textSection} key={index}/>)} */}
 
 
       <group

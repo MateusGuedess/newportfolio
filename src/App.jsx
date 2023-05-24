@@ -11,9 +11,9 @@ function App() {
   
   return (
     <>
-      <Canvas>
+      <Canvas >
         <color attach="background" args={["#ececec"]} />
-        <ScrollControls pages={play && !end ? 20: 0} damping={0.5} 
+        <ScrollControls pages={play && !end ? 19: 0} damping={0.5} 
         style={{
           top: "10px",
           left: "0px",
@@ -28,7 +28,7 @@ function App() {
         <Experience />
         </ScrollControls>
         <EffectComposer>
-          <Noise opacity={0.1} />
+          <Noise opacity={0.2} />
         </EffectComposer>
       </Canvas>
       <Overlay />

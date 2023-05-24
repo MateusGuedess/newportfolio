@@ -19,7 +19,7 @@ export function AirPlane(props) {
       <mesh geometry={nodes.PUSHILIN_Plane_Circle000.geometry}>
       <meshStandardMaterial color="white" />
       </mesh>
-      <mesh ref={helix} geometry={nodes.PUSHILIN_Plane_Helix.geometry} position={[1.09, 0.23, 0]} >
+      <mesh ref={helix} geometry={nodes.PUSHILIN_Plane_Helix.geometry} position={[1.09, 0.23, 0]}  >
         <meshStandardMaterial color="white" />
       </mesh>
     </group>

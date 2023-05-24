@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Me() {
   const {scrollMoment} = usePlay()
-  //  console.log(scrollMoment)
+
   return (
     <AnimatePresence>
-      {scrollMoment > 0.11 && scrollMoment < 0.15 && <motion.div  
+      {scrollMoment > 0.11 && scrollMoment < 0.16 && <motion.div  
       className="about-me"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: scrollMoment * 8, opacity: 1 }}
