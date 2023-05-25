@@ -24,8 +24,7 @@ function Me() {
         <img src={ProfilePhoto} />
         <div  className="article">
           <h2>Mateus Guedes da Conceição</h2>
-          Mussum Ipsum, cacilds vidis litro abertis. Mé faiz elementum girarzis, nisi eros vermeio.
-          Suco de cevadiss deixa as pessoas mais interessantis.Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+          Um desenvolvedor de 25 anos, motivado a aprender, que está sempre buscando novos desafios que possa influenciar no meu desenvolvimento profissional, mas que ama conhecer novas pessoas e trocar experiências com outro profissionais, que ama assistir futebol, mas também gosta de jogar video game e está pronto pra qualquer desafio a qualquer momento.
         </div>
       </motion.div>}
     </AnimatePresence>
