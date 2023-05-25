@@ -3,7 +3,7 @@ import { usePlay } from '../contexts/Play'
 import { motion, AnimatePresence } from "framer-motion";
 import ProfilePhoto from "../assets/Profile.png"
 
-function Me() {
+function AboutMe() {
   const {scrollMoment} = usePlay()
 
   return (
@@ -12,14 +12,14 @@ function Me() {
       className="about-me"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      exit={{ opacity: 0, scale: 1 }}
-      
+      exit={{ opacity: 0, scale: 1 }}  
       transition={{
         type: "spring",
         stiffness: 260,
         damping: 20,
         delay: 0.5,
-        duration: 1000
+        duration: 3,
+        ease: "easeIn"
       }}>
         <img src={ProfilePhoto} />
         <div  className="article">
@@ -31,4 +31,4 @@ function Me() {
   )
 }
 
-export default Me
+export default AboutMe
