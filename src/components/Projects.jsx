@@ -105,6 +105,27 @@ function Projects() {
                     scale: 1.1
                 }}
             style={{fontSize: "26px", color: "white",position: 'absolute', top: "35%"}} class="fa-solid fa-chevron-right"></motion.i>
+            <motion.i
+                onClick={() => selected != 2 ? setSelected(selected + 1) : setSelected(0)}
+                initial={{
+                    x:-80
+                }}
+                animate={{
+                    x: 100
+                }}      
+                transition={{
+                    ease: "linear",
+                    duration: 3,
+                }}
+                onHoverStart={{
+                    scale: 1.1
+                }}
+                style={{
+                    fontSize: "26px", 
+                    color: "white",
+                    position: 'absolute', 
+                    top: "35%"
+                }} class="fa-solid fa-chevron-left"></motion.i>
         </motion.div>
     </AnimatePresence>
   )
