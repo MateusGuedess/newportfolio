@@ -1,9 +1,13 @@
 import React, { useState} from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import Profile from "../assets/Profile.png"
+import { usePlay } from '../contexts/Play';
+
 
 function Projects() {
     const [selected, setSelected] = useState(0)
+
+    const {scrollMoment} = usePlay()
 
     const projects = [
         {
@@ -24,7 +28,8 @@ function Projects() {
     ]
   return (
     <AnimatePresence>
-        <motion.div
+        {/* {scrollMoment >= 0.23 && scrollMoment <= 0.35 && */}
+            <motion.div 
             initial={{
                 opacity: 0,
                 scale: 0,
@@ -41,36 +46,23 @@ function Projects() {
                 ease: "linear",
                 duration: 3,
             }}
-            style={{
-                height: "464px",
-                width: "280px",
-                position: "absolute",
-                top: 0,
-                borderRadius: "10px",
-                boxShadow: "0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19)"
-            }}
+            className="projects"
         >
             {projects.map((item, index) => {
                 if(index == selected) {
                     return(
                         <motion.div
                             key={index}
-                            style={{
-                                backgroundImage: `url(${Profile})`,
-                                height: "464px",
-                                width: "280px",
-                                backgroundRepeat: "no-repeat, no-repeat",
-                                backgroundSize: "cover",
-                                borderRadius: "10px"
-                            }}
+                            className="projects-image"
                             initial={{
-                                x: 0
-                            }} 
-                            animate={{
                                 x: -20
+                            }} 
+                            style={{  backgroundImage: `url(${Profile})`}}
+                            animate={{
+                                x: 0
                             }}      
                             exit={{
-                                x: 0
+                                x: 40
                             }} 
                             transition={{
                                 ease: "linear",
@@ -127,6 +119,7 @@ function Projects() {
                     top: "35%"
                 }} class="fa-solid fa-chevron-left"></motion.i>
         </motion.div>
+        // }
     </AnimatePresence>
   )
 }
