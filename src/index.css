@@ -259,6 +259,13 @@ body {
   margin: 0;
 }
 
+.projects .fa-chevron-right, .projects .fa-chevron-left {
+  font-size: 32px;
+  color: white;
+  position: absolute;
+  top: 40%
+}
+
 @media screen and (max-width: 768px) {
   .logo {
     font-size: 2.5rem;

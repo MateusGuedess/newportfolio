@@ -28,7 +28,7 @@ function Projects() {
     ]
   return (
     <AnimatePresence>
-        {/* {scrollMoment >= 0.23 && scrollMoment <= 0.35 && */}
+        {scrollMoment >= 0.23 && scrollMoment <= 0.35 &&
             <motion.div 
             initial={{
                 opacity: 0,
@@ -55,21 +55,15 @@ function Projects() {
                             key={index}
                             className="projects-image"
                             initial={{
-                                x: -20
+                                x: 0
                             }} 
                             style={{  backgroundImage: `url(${Profile})`}}
                             animate={{
-                                x: 0
+                                x: -20
                             }}      
-                            exit={{
-                                x: 40
-                            }} 
                             transition={{
-                                ease: "linear",
-                                duration: 2,
-                                opacity: {
-                                    duration: 0.5
-                                }
+                                ease: "easeInOut",
+                                duration: 2
                             }}
                         >
     
@@ -90,36 +84,25 @@ function Projects() {
                     x: 230
                 }}      
                 transition={{
-                    ease: "linear",
+                    ease: "easeInOut",
                     duration: 3,
                 }}
-                onHoverStart={{
-                    scale: 1.1
-                }}
-            style={{fontSize: "26px", color: "white",position: 'absolute', top: "35%"}} class="fa-solid fa-chevron-right"></motion.i>
+                class="fa-solid fa-chevron-right" />
             <motion.i
-                onClick={() => selected != 2 ? setSelected(selected + 1) : setSelected(0)}
+                onClick={() => selected != 0 ? setSelected(selected - 1) : setSelected(2)}
                 initial={{
-                    x:-80
+                    x: 80
                 }}
                 animate={{
-                    x: 100
+                    x: 35
                 }}      
                 transition={{
                     ease: "linear",
                     duration: 3,
                 }}
-                onHoverStart={{
-                    scale: 1.1
-                }}
-                style={{
-                    fontSize: "26px", 
-                    color: "white",
-                    position: 'absolute', 
-                    top: "35%"
-                }} class="fa-solid fa-chevron-left"></motion.i>
+                class="fa-solid fa-chevron-left" />
         </motion.div>
-        // }
+         }
     </AnimatePresence>
   )
 }
