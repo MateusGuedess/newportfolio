@@ -296,7 +296,7 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 70%;
     min-width: 200px;
     justify-content: space-between;
   }
@@ -310,7 +310,7 @@ body {
   
   .about-me .article {
     padding: 20px;
-     margin-top: 70%;
+    margin-top: 70%;
     text-align: justify;
     width: 83%;    
     font-size: 13px;
