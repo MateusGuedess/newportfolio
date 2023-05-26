@@ -44,7 +44,12 @@ function Projects() {
             }}  
             transition={{
                 ease: "linear",
-                duration: 3,
+                opacity: {
+                    duration: 1
+                },
+                scale: {
+                    duration: 3
+                }
             }}
             className="projects"
         >
@@ -54,13 +59,7 @@ function Projects() {
                         <motion.div
                             key={index}
                             className="projects-image"
-                            initial={{
-                                x: 0
-                            }} 
-                            style={{  backgroundImage: `url(${Profile})`}}
-                            animate={{
-                                x: -20
-                            }}      
+                            animate={{backgroundImage: `url(${Profile})`}}     
                             transition={{
                                 ease: "easeInOut",
                                 duration: 2
