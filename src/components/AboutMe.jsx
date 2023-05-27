@@ -24,7 +24,7 @@ function AboutMe() {
         <img src={ProfilePhoto} />
         <div  className="article">
           <h2>Mateus Guedes da Conceição</h2>
-          Um desenvolvedor de 25 anos, motivado a aprender, que está sempre buscando novos desafios que possa influenciar no meu desenvolvimento profissional, mas que ama conhecer novas pessoas e trocar experiências com outro profissionais, que ama assistir futebol, mas também gosta de jogar video game e está pronto pra qualquer desafio a qualquer momento.
+          Um desenvolvedor de 26 anos, motivado a aprender, que está sempre buscando novos desafios que possa influenciar no meu desenvolvimento profissional, e que ama conhecer novas pessoas e trocar novas experiências com outro profissionais, que ama assistir futebol, mas também gosta de jogar video game e está pronto pra qualquer desafio a qualquer momento.
         </div>
       </motion.div>}
     </AnimatePresence>
