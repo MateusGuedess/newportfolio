@@ -10,8 +10,8 @@ function AboutMe() {
     <AnimatePresence>
       {scrollMoment >= 0.1 && scrollMoment <= 0.2 && <motion.div  
       className="about-me"
-      initial={{  opacity: 0 }}
-      animate={{  opacity: 1 }}
+      initial={{  x: -300 }}
+      animate={{  x: 0 }}
       exit={{ opacity: 0}}  
       transition={{
         type: "spring",
