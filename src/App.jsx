@@ -12,7 +12,7 @@ function App() {
   
   return (
     <>
-      <Canvas >
+      <Canvas>
         <color attach="background" args={["#ececec"]} />
         <ScrollControls pages={play && !end ? 19: 0} damping={0.5} 
         style={{
