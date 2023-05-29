@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import { motion, AnimatePresence } from "framer-motion";
-import Profile from "../assets/Profile.png"
-import { usePlay } from '../contexts/Play';
+import Profile from "../../assets/Profile.png"
+import { usePlay } from '../../contexts/Play';
 
 
 function Projects() {
@@ -29,30 +29,19 @@ function Projects() {
   return (
     <AnimatePresence>
         {scrollMoment >= 0.23 && scrollMoment <= 0.35 &&
-            <motion.div 
-            initial={{
-                opacity: 0,
-                scale: 0,
-            }}
-            animate={{
-                opacity: 1,
-                scale: 1
-            }}      
-            exit={{
-                opacity: 0, 
-                scale: 0
-            }}  
-            transition={{
-                ease: "linear",
-                opacity: {
-                    duration: 1
-                },
-                scale: {
-                    duration: 3
-                }
-            }}
+            <motion.div  
             className="projects"
-        >
+            initial={{  x: -300 }}
+            animate={{  x: 0 }}
+            exit={{ x: -300}}  
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              delay: 0.5,
+              duration: 3,
+              ease: "linear"
+            }}>
             {projects.map((item, index) => {
                 if(index == selected) {
                     return(
