@@ -1,14 +1,13 @@
 .projects {
-    top: 25%;
-    right: 10%;
-    height: 464px;
-    width: 280px;
-    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 400px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
   }
   
-  .projects-image {
+  .projects-card {
     height: 464px;
     width: 280px;
     background-repeat: no-repeat no-repeat;

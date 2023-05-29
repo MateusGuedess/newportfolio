@@ -41,21 +41,17 @@ function Projects() {
             }}>
             {projects.map((item, index) => {
                     return(
-                        <motion.div
+                        <div
                             key={index}
-                            className="projects-image"
-                            animate={{backgroundImage: `url(${Profile})`}}     
-                            transition={{
-                                ease: "easeInOut",
-                                duration: 2
-                            }}
+                            className="projects__card"
                         >
+                            <img src={Profile} />
     
                             <h2>{item?.title}</h2>
                             <p>
                             {item?.description}
                             </p>
-                        </motion.div>
+                        </div>
                     )}
             )}
         </motion.div>
