@@ -6,11 +6,9 @@
   position: relative;
 }
 
-
 body {
   margin: 0;
 }
-
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -200,35 +198,6 @@ body {
   opacity: 0;
 }
 
-.projects {
-  top: 25%;
-  right: 10%;
-  height: 464px;
-  width: 280px;
-  position: absolute;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
-}
-
-.projects-image {
-  height: 464px;
-  width: 280px;
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-
-.projects-image h2 {
-  margin: 0;
-}
-
-.projects .fa-chevron-right, .projects .fa-chevron-left {
-  font-size: 32px;
-  color: white;
-  position: absolute;
-  top: 40%
-}
-
 @media screen and (max-width: 768px) {
   .logo {
     font-size: 2.5rem;
@@ -249,39 +218,6 @@ body {
   .outro__text {
     font-size: 1rem;
   }
-/* 
-  .aboutMe {
-    position: absolute;
-
-    border-radius: 10px;
-    max-width: 250px;
-    color: #444;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    min-width: 200px;
-    justify-content: space-between;
-  }
-  
-  .aboutMe img {
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 190px;
-  }
-  
-  .aboutMe .article {
-    padding: 20px;
-    margin-top: 70%;
-    text-align: justify;
-    width: 83%;    
-    font-size: 13px;
-  }
-  
-  .aboutMe .article h2 {
-    font-size: 16px;
-  } */
   
 }
 

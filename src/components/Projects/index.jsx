@@ -3,10 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Profile from "../../assets/Profile.png"
 import { usePlay } from '../../contexts/Play';
 
-
 function Projects() {
-    const [selected, setSelected] = useState(0)
-
     const {scrollMoment} = usePlay()
 
     const projects = [
@@ -43,7 +40,6 @@ function Projects() {
               ease: "linear"
             }}>
             {projects.map((item, index) => {
-                if(index == selected) {
                     return(
                         <motion.div
                             key={index}
@@ -61,34 +57,7 @@ function Projects() {
                             </p>
                         </motion.div>
                     )}
-                }
             )}
-            <motion.i
-                onClick={() => selected != 2 ? setSelected(selected + 1) : setSelected(0)}
-                initial={{
-                    x:-80
-                }}
-                animate={{
-                    x: 230
-                }}      
-                transition={{
-                    ease: "easeInOut",
-                    duration: 3,
-                }}
-                class="fa-solid fa-chevron-right" />
-            <motion.i
-                onClick={() => selected != 0 ? setSelected(selected - 1) : setSelected(2)}
-                initial={{
-                    x: 80
-                }}
-                animate={{
-                    x: 35
-                }}      
-                transition={{
-                    ease: "linear",
-                    duration: 3,
-                }}
-                class="fa-solid fa-chevron-left" />
         </motion.div>
          }
     </AnimatePresence>

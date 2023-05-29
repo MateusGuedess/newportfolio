@@ -1,0 +1,28 @@
+.projects {
+    top: 25%;
+    right: 10%;
+    height: 464px;
+    width: 280px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  }
+  
+  .projects-image {
+    height: 464px;
+    width: 280px;
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  
+  .projects-image h2 {
+    margin: 0;
+  }
+  
+  .projects .fa-chevron-right, .projects .fa-chevron-left {
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    top: 40%
+  }
