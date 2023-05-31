@@ -30,7 +30,11 @@ function AboutMe() {
           </div>
         </div>
         <span className="aboutMe__description">
-            Um desenvolvedor de 26 anos, motivado a aprender, que está sempre buscando novos desafios que possa influenciar no meu desenvolvimento profissional, e que ama conhecer novas pessoas e trocar novas experiências com outro profissionais, que ama assistir futebol, mas também gosta de jogar video game e está pronto pra qualquer desafio a qualquer momento.
+        Sou um desenvolvedor de 26 anos, altamente motivado a aprender e sempre em busca de novos desafios para impulsionar meu desenvolvimento profissional. Tenho uma paixão por conhecer novas pessoas e trocar experiências com outros profissionais. Além disso, adoro assistir futebol e também sou um entusiasta de videogames.
+        <br />
+        Estou sempre pronto para encarar qualquer desafio que surja no meu caminho. Ao longo dos meus 8 anos de carreira como desenvolvedor, tenho me dedicado ao Javascript, principalmente na área de frontend. Nos últimos 4 anos, tenho trabalhado exclusivamente com React e Next JS. Além disso, estou estudando outras linguagens, como Flutter e React Native, ampliando assim meu conhecimento.
+        <br />
+        Meu foco principal tem sido me tornar um frontend excepcional, buscando constantemente aprimorar minhas habilidades nessa área.
         </span>
       </motion.div>}
     </AnimatePresence>
