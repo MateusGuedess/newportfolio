@@ -108,23 +108,23 @@ export const Experience = () => {
           curvePoints[1].z - 62
         ),
       },
-      {
-        rotation: new Euler(Math.PI / 2, Math.PI / 2, Math.PI / 3),
-        scale: new Vector3(5, 5, 5),
-        position: new Vector3(
-          curvePoints[1].x + 54,
-          curvePoints[1].y + 2,
-          curvePoints[1].z - 82
-        ),
-      },
-      {
-        scale: new Vector3(5, 5, 5),
-        position: new Vector3(
-          curvePoints[1].x + 8,
-          curvePoints[1].y - 14,
-          curvePoints[1].z - 22
-        ),
-      },
+      // {
+      //   rotation: new Euler(Math.PI / 2, Math.PI / 2, Math.PI / 3),
+      //   scale: new Vector3(5, 5, 5),
+      //   position: new Vector3(
+      //     curvePoints[1].x + 54,
+      //     curvePoints[1].y + 2,
+      //     curvePoints[1].z - 82
+      //   ),
+      // },
+      // {
+      //   scale: new Vector3(5, 5, 5),
+      //   position: new Vector3(
+      //     curvePoints[1].x + 8,
+      //     curvePoints[1].y - 14,
+      //     curvePoints[1].z - 22
+      //   ),
+      // },
       // SECOND POINT
       {
         scale: new Vector3(3, 3, 3),
@@ -152,68 +152,68 @@ export const Experience = () => {
         rotation: new Euler(Math.PI / 4, 0, Math.PI / 3),
       },
       // THIRD POINT
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[3].x + 3,
-          curvePoints[3].y - 10,
-          curvePoints[3].z + 50
-        ),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[3].x - 10,
-          curvePoints[3].y,
-          curvePoints[3].z + 30
-        ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(4, 4, 4),
-        position: new Vector3(
-          curvePoints[3].x - 20,
-          curvePoints[3].y - 5,
-          curvePoints[3].z - 8
-        ),
-        rotation: new Euler(Math.PI, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(5, 5, 5),
-        position: new Vector3(
-          curvePoints[3].x + 0,
-          curvePoints[3].y - 5,
-          curvePoints[3].z - 98
-        ),
-        rotation: new Euler(0, Math.PI / 3, 0),
-      },
-      // FOURTH POINT
-      {
-        scale: new Vector3(2, 2, 2),
-        position: new Vector3(
-          curvePoints[4].x + 3,
-          curvePoints[4].y - 10,
-          curvePoints[4].z + 2
-        ),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[4].x + 24,
-          curvePoints[4].y - 6,
-          curvePoints[4].z - 42
-        ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[4].x - 4,
-          curvePoints[4].y + 9,
-          curvePoints[4].z - 62
-        ),
-        rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
-      },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[3].x + 3,
+      //     curvePoints[3].y - 10,
+      //     curvePoints[3].z + 50
+      //   ),
+      // },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[3].x - 10,
+      //     curvePoints[3].y,
+      //     curvePoints[3].z + 30
+      //   ),
+      //   rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
+      // },
+      // {
+      //   scale: new Vector3(4, 4, 4),
+      //   position: new Vector3(
+      //     curvePoints[3].x - 20,
+      //     curvePoints[3].y - 5,
+      //     curvePoints[3].z - 8
+      //   ),
+      //   rotation: new Euler(Math.PI, 0, Math.PI / 5),
+      // },
+      // {
+      //   scale: new Vector3(5, 5, 5),
+      //   position: new Vector3(
+      //     curvePoints[3].x + 0,
+      //     curvePoints[3].y - 5,
+      //     curvePoints[3].z - 98
+      //   ),
+      //   rotation: new Euler(0, Math.PI / 3, 0),
+      // },
+      // // FOURTH POINT
+      // {
+      //   scale: new Vector3(2, 2, 2),
+      //   position: new Vector3(
+      //     curvePoints[4].x + 3,
+      //     curvePoints[4].y - 10,
+      //     curvePoints[4].z + 2
+      //   ),
+      // },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[4].x + 24,
+      //     curvePoints[4].y - 6,
+      //     curvePoints[4].z - 42
+      //   ),
+      //   rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
+      // },
+      // {
+      //   scale: new Vector3(3, 3, 3),
+      //   position: new Vector3(
+      //     curvePoints[4].x - 4,
+      //     curvePoints[4].y + 9,
+      //     curvePoints[4].z - 62
+      //   ),
+      //   rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
+      // },
       // FINAL
       {
         scale: new Vector3(3, 3, 3),
@@ -540,9 +540,9 @@ export const Experience = () => {
           </mesh>
       </group>
 
-      {/* {clouds?.map((cloud, index) => 
+      {clouds?.map((cloud, index) => 
         <Cloud sceneOpacity={sceneOpacity} {...cloud} key={index} />
-      )} */}
+      )}
 
     </>
   ), [])

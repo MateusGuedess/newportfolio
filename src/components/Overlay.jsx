@@ -12,7 +12,7 @@ function Overlay() {
         {progress === 100 && (
             <div className={`intro ${play ? "intro--disappear" : ""}`}>
                 <h1 className="logo">Mateus Guedes</h1>
-                <p className="intro__scroll">Scroll to begin the journey</p>
+                <p className="intro__scroll">Scrolle lentamente para começar a sua viagem..</p>
                 <button className="explore" onClick={() => setPlay(true)}>
                     Explore
                 </button>
@@ -20,7 +20,7 @@ function Overlay() {
         )}
         <div className={`outro ${end ? "outro--appear" : ""}`}>
             <p className="outro__text">
-                Wish you had a great flight with us...
+                Espero que você tenha tido uma boa viagem
             </p>
         </div>
     </div>

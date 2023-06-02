@@ -16,10 +16,12 @@ function AboutMe() {
       exit={{ x: -300}}  
       transition={{
         type: "spring",
-        stiffness: 260,
-        damping: 20,
+        stiffness: 0,
+        damping: 0,
         delay: 0.5,
-        duration: 3,
+        x: {
+          duration: 1
+        },
         ease: "linear"
       }}>
         <div className="aboutMe--header">
