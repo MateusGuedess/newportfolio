@@ -6,6 +6,7 @@ import Overlay from "./components/Overlay"
 import { usePlay } from "./contexts/Play";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   const { play, end } = usePlay()
@@ -28,13 +29,14 @@ function App() {
 
         <Experience />
         </ScrollControls>
-        <EffectComposer>
-          <Noise opacity={0.2} />
-        </EffectComposer>
+        {/* <EffectComposer>
+          <Noise opacity={0.05} />
+        </EffectComposer> */}
       </Canvas>
       <Overlay />
       <AboutMe />
       <Projects />
+      <SocialMedia />
     </>
   );
 }

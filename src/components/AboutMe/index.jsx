@@ -36,9 +36,6 @@ function AboutMe() {
         <br />
         Meu foco principal tem sido me tornar um frontend excepcional, buscando constantemente aprimorar minhas habilidades nessa área.
         </span>
-        <div className="aboutMe__linkedin">
-          <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="mateusguedess" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/mateusguedess?trk=profile-badge">Mateus Guedes</a></div>     
-        </div>
       </motion.div>}
     </AnimatePresence>
   )

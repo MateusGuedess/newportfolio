@@ -540,9 +540,9 @@ export const Experience = () => {
           </mesh>
       </group>
 
-      {clouds?.map((cloud, index) => 
+      {/* {clouds?.map((cloud, index) => 
         <Cloud sceneOpacity={sceneOpacity} {...cloud} key={index} />
-      )}
+      )} */}
 
     </>
   ), [])

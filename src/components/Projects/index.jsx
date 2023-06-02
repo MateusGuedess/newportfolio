@@ -8,8 +8,8 @@ function Projects() {
 
     const projects = [
         {
-            title: "Project 1",
-            description: "Description of project 1",
+            title: "Camiseta 3D",
+            description: "Faça sua camiseta você mesmo!",
             thumb: Profile
         },
         {
